@@ -11,7 +11,7 @@ const root = createRoot(container);
 root.render(
   <Provider>
     <App />
-  </Provider>
+  </Provider>,
 );
 
 reportWebVitals();

@@ -23,7 +23,7 @@ export const Provider = ({ children }) => {
       // into the collectibles array. And then dispatching it.
 
       const res = await fetch(
-        "https://api.opensea.io/api/v1/assets?owner=0x55F5843236D2e95E68E58cB05a43a09fa7745657&order_direction=desc&asset_contract_address=0x1975fbcf98b5678db232c8d2c78fb574fab14d73&limit=20&include_orders=false"
+        "https://api.opensea.io/api/v1/assets?owner=0x55F5843236D2e95E68E58cB05a43a09fa7745657&order_direction=desc&asset_contract_address=0x1975fbcf98b5678db232c8d2c78fb574fab14d73&limit=20&include_orders=false",
       );
 
       // Why do I have to get the first one?
@@ -70,7 +70,7 @@ export const Provider = ({ children }) => {
         dispatch({ type: "SET_ACCOUNT", payload: INITIAL_STATE.user });
       }
     },
-    [dispatch]
+    [dispatch],
   );
 
   const connectProvider = useCallback(async () => {

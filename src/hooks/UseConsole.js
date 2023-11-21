@@ -22,7 +22,7 @@ const UseConsole = () => {
           log.concat({
             input: val,
             output: `${commands[val]}` || `command not found: ${val}`,
-          })
+          }),
         );
       }
     }

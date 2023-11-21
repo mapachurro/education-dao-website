@@ -32,15 +32,15 @@ const ProgressIndicator = ({ modulesCompleted, moduleCount }) => {
   const radius = 45;
   const circumference = Math.ceil(2 * Math.PI * radius);
   const fill = Math.abs(
-    Math.ceil((circumference / moduleCount) * (moduleCount - modulesCompleted))
+    Math.ceil((circumference / moduleCount) * (moduleCount - modulesCompleted)),
   );
 
   const prevFill = Math.abs(
-    Math.ceil((circumference / moduleCount) * (moduleCount - modulesCompleted))
+    Math.ceil((circumference / moduleCount) * (moduleCount - modulesCompleted)),
   );
 
   const durationCalc = Math.ceil(
-    (0.1 / moduleCount) * (moduleCount - modulesCompleted)
+    (0.1 / moduleCount) * (moduleCount - modulesCompleted),
   );
 
   const transition = {

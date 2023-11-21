@@ -63,7 +63,7 @@ describe("UseLesson hook", () => {
       it("should fetch the page", async () => {
         renderHook(() => useLesson("slug"));
         await waitFor(() =>
-          expect(mock.history.get[0].url).toEqual(getLessonUrl("slug"))
+          expect(mock.history.get[0].url).toEqual(getLessonUrl("slug")),
         );
       });
 

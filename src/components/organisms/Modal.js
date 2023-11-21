@@ -119,7 +119,7 @@ const Modal = ({ header, status, children }) => {
           </Container>
         </Overlay>
       </AnimatePresence>,
-      document.getElementById("portal")
+      document.getElementById("portal"),
     )
   );
 };

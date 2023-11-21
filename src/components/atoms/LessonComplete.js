@@ -30,7 +30,7 @@ const LessonComplete = () => {
       const dummyLessonContract = new ethers.Contract(
         CONTRACTS[0].address,
         CONTRACTS[0].abi,
-        signer
+        signer,
       );
       const tx = await dummyLessonContract.incrementCounter();
 
