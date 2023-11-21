@@ -1,6 +1,4 @@
-export const publicKeyCryptography =
-
-`# Public Key Cryptography
+export const publicKeyCryptography = `# Public Key Cryptography
 ---
 
 Public key cryptography is powerful in general because it is one of the few things on the planet that can create an [asymmetric power](https://searchsecurity.techtarget.com/definition/asymmetric-cryptography) imbalance. This means that, even if the largest corporation or government were to focus every available resource into figuring out a certain individual's private key, they will not be able to do it. Isn't that crazy!? This asymmetric power imbalance is so dramatic that in the 1990s, world governments fought against the use of public key cryptography. The argument was, because public key cryptography essentially cannot be broken, it represented a critical threat to the national security of governments like the United States. We'll discuss this history more in a following section, but know that at one point using this technology was almost illegal!
@@ -47,4 +45,4 @@ Now that you have an understanding of public key cryptography generally, let's d
 ### Advanced Public Key Cryptography Resources
 
 * [Coding Problem Set: Cryptopals](https://cryptopals.com/) This is an extremely advanced problem set series discussing applied cryptography generally. Not for the faint of heart!
-`
+`;

@@ -1,32 +1,34 @@
-import React, { useState, useContext } from 'react'
+import React, { useState, useContext } from "react";
 
-import { Context } from '../context'
+import { Context } from "../context";
 
 const UseConsole = () => {
-  const { user } = useContext(Context)
-  const { address } = user
-  const [log, setLog] = useState([])
+  const { user } = useContext(Context);
+  const { address } = user;
+  const [log, setLog] = useState([]);
 
   const commands = {
     whoami: address,
-    'truffle test': 'Testing commands',
-    clear: '',
-  }
+    "truffle test": "Testing commands",
+    clear: "",
+  };
 
   const onSubmit = (val, key) => {
-    if (key === 'Enter') {
-      if (val === 'clear') {
-        return setLog([])
+    if (key === "Enter") {
+      if (val === "clear") {
+        return setLog([]);
       } else {
-        return setLog((log) => log.concat({
-          input: val,
-          output: `${commands[val]}` || `command not found: ${val}`
-        }))
+        return setLog((log) =>
+          log.concat({
+            input: val,
+            output: `${commands[val]}` || `command not found: ${val}`,
+          })
+        );
       }
     }
-  }
+  };
 
-  return [log, onSubmit]
-}
+  return [log, onSubmit];
+};
 
-export default UseConsole
+export default UseConsole;

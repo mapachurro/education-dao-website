@@ -1,45 +1,47 @@
-import React, { useContext } from 'react'
+import React, { useContext } from "react";
 
-import { ethers } from 'ethers'
-import { lighten, transparentize } from 'polished'
-import PropTypes from 'prop-types'
-import styled from 'styled-components'
+import { ethers } from "ethers";
+import { lighten, transparentize } from "polished";
+import PropTypes from "prop-types";
+import styled from "styled-components";
 
-import { CONTRACTS } from '../../constants/Contracts.js'
-import { Context } from '../../context'
+import { CONTRACTS } from "../../constants/Contracts.js";
+import { Context } from "../../context";
 
 const Button = styled.button`
   padding: 0.75em 2em;
   cursor: pointer;
   border-radius: 25px;
   border: none;
-  background-color: #826FD8;
+  background-color: #826fd8;
   float: right;
   p {
     padding-bottom: 2px;
     font-weight: 500;
     font-size: 1.5em;
   }
-`
+`;
 
 const LessonComplete = () => {
-  const { signer } = useContext(Context)
-  const handleComplete = async ( lessonName ) => {
+  const { signer } = useContext(Context);
+  const handleComplete = async (lessonName) => {
     try {
-      console.log('rendered')
-      const dummyLessonContract = new ethers.Contract(CONTRACTS[0].address, CONTRACTS[0].abi, signer)
-      const tx = await dummyLessonContract.incrementCounter()
+      console.log("rendered");
+      const dummyLessonContract = new ethers.Contract(
+        CONTRACTS[0].address,
+        CONTRACTS[0].abi,
+        signer
+      );
+      const tx = await dummyLessonContract.incrementCounter();
 
-      await tx.wait()
+      await tx.wait();
 
-      const { hash } = tx
-      console.log(hash)
-
-
-    } catch(e) {
-      console.log(e)
+      const { hash } = tx;
+      console.log(hash);
+    } catch (e) {
+      console.log(e);
     }
-  }
+  };
 
   // try {
   //   const approveDai = await dai.approve(spread.address, bigNumberify(amount))
@@ -59,10 +61,10 @@ const LessonComplete = () => {
     <Button onClick={handleComplete}>
       <p>Continue</p>
     </Button>
-  )
-}
+  );
+};
 
-export default LessonComplete
+export default LessonComplete;
 
 // LessonComplete.propTypes = {
 //   handleComplete: PropTypes.func.isRequired,

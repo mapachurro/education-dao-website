@@ -5,6 +5,7 @@
 </div>
 
 ## How to run
+
 Install dependencies
 `yarn` or `yarn install`
 
@@ -15,15 +16,17 @@ Run Storybook
 `yarn storybook`
 
 ## To Add
+
 - Badges
   - [ ] Miro board
   - [ ] Task manager like trello
   - [ ] Etherscan badges for deployed smart contracts
   - [ ] Fleek badge
   - [ ] **Build status but make it funny**
-  - [ ] Storybook *when that's also deployed*
+  - [ ] Storybook _when that's also deployed_
   - [ ] License
 
 ## Contributing
+
 - Tutorial on micromark
 - Tutorial on styled-components

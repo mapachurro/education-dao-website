@@ -256,4 +256,4 @@ project:
 +    qt: core gui
 public_headers: "src/*.h"
 \`\`\`
-`
+`;

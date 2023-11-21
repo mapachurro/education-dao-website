@@ -13,4 +13,4 @@ While there's enormous promise with blockchain development, it requires an aware
 ::resource{title='The Promise of Blockchain: Vinay Gupta' link='https://vimeo.com/161183966' description='' type='video'}
 ::resource{title='Cryptocurrencies (Last Week Tonight)' link='https://www.youtube.com/watch?v=g6iDZspbRMg' description='' type='video'}
 :::
-`
+`;

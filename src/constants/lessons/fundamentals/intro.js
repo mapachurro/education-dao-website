@@ -38,4 +38,4 @@ The Ethereum protocol is strong enough to sustain financial transactions, but it
 # What Makes Up a Protocol?
 
 In the following modules, we're going to examine the elements engineers have used to build the peer-to-peer blockchain protocol. We'll then see how systems like Bitcoin and Ethereum join these separate elements together to make a wholly new product: blockchain. Last, we'll talk about the development of Bitcoin and how you can start playing with the Ethereum blockchain right from your browser.
-`
+`;

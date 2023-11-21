@@ -1,11 +1,11 @@
-import React, { useContext } from 'react'
+import React, { useContext } from "react";
 
-import { lighten } from 'polished'
-import PropTypes from 'prop-types'
-import { Link } from 'react-router-dom'
-import styled from 'styled-components'
+import { lighten } from "polished";
+import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
+import styled from "styled-components";
 
-import { Context } from '../../context'
+import { Context } from "../../context";
 
 const Wrap = styled.div`
   border: 1px solid red;
@@ -17,22 +17,22 @@ const Wrap = styled.div`
   h3 {
     text-align: center;
   }
-`
+`;
 
 const Card = ({ path, data }) => {
   return (
     <Wrap>
       <img src={data?.image} />
       <h3>
-        <Link to={path || '#'}>{data?.title}</Link>
+        <Link to={path || "#"}>{data?.title}</Link>
       </h3>
     </Wrap>
-  )
-}
+  );
+};
 
-export default Card
+export default Card;
 
 Card.propTypes = {
   path: PropTypes.string,
-  data: PropTypes.object
-}
+  data: PropTypes.object,
+};

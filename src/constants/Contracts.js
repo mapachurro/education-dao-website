@@ -17,8 +17,7 @@ export const CONTRACTS = [
     //       }
     //   }
 
-    
-    name: 'dummyLesson',
+    name: "dummyLesson",
     abi: `[
       {
         "inputs": [],
@@ -48,6 +47,6 @@ export const CONTRACTS = [
         "type": "function"
       }
     ]`,
-    address: '0xf7a9110486cb5257baebaef0c808c7cf738f7383'
-  }
-]
+    address: "0xf7a9110486cb5257baebaef0c808c7cf738f7383",
+  },
+];

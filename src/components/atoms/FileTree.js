@@ -1,13 +1,9 @@
-import React from 'react'
+import React from "react";
 
-import styled from 'styled-components'
+import styled from "styled-components";
 
 const FileTree = () => {
-  return (
-    <div>
+  return <div></div>;
+};
 
-    </div>
-  )
-}
-
-export default FileTree
+export default FileTree;

@@ -1,8 +1,8 @@
-import { lighten, transparentize } from 'polished'
+import { lighten, transparentize } from "polished";
 
-import { NORD_PALETTE, PALETTE } from './Palette'
+import { NORD_PALETTE, PALETTE } from "./Palette";
 
-const { frost, aurora } = NORD_PALETTE
+const { frost, aurora } = NORD_PALETTE;
 
 export const THEME = `
   pre[class*='language-'],
@@ -263,4 +263,4 @@ export const THEME = `
     // }
   	}
   }
-`
+`;

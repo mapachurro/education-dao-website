@@ -110,4 +110,4 @@ The oracle ecosystem is growing as fast as blockchain, and we'll touch on it mor
 ::resource{title='So You Want to Use a Price Oracle' link='https://samczsun.com/so-you-want-to-use-a-price-oracle/) Interesting article (albeit about on-chain oracles' description='Interesting article (albeit about on-chain oracles) discussing attack vectors.' type='article'}
 
 :::
-`
+`;

@@ -1,17 +1,17 @@
-import React from 'react'
+import React from "react";
 
-import { lighten } from 'polished'
-import PropTypes from 'prop-types'
-import styled from 'styled-components'
+import { lighten } from "polished";
+import PropTypes from "prop-types";
+import styled from "styled-components";
 
-import arrow from '../../assets/svg/arrow-top-right.svg'
-import book from '../../assets/svg/book.svg'
-import terminal from '../../assets/svg/terminal.svg'
-import video from '../../assets/svg/video.svg'
-import Anchor from '../atoms/Anchor'
+import arrow from "../../assets/svg/arrow-top-right.svg";
+import book from "../../assets/svg/book.svg";
+import terminal from "../../assets/svg/terminal.svg";
+import video from "../../assets/svg/video.svg";
+import Anchor from "../atoms/Anchor";
 
 const Wrap = styled.div`
-  ${'' /* border: 1px solid #9aa1b2; */}
+  ${"" /* border: 1px solid #9aa1b2; */}
   background-color: #2B2A2A;
   width: 315px;
   height: 200px;
@@ -36,7 +36,7 @@ const Wrap = styled.div`
   }
   h4 {
     margin: 0;
-    color: ${lighten(0.1, '#9aa1b2')};
+    color: ${lighten(0.1, "#9aa1b2")};
     padding: 0.1em 1em;
   }
   p {
@@ -51,16 +51,16 @@ const Wrap = styled.div`
     bottom: 1em;
     right: 1em;
   }
-`
+`;
 
 const icons = {
-  'code': terminal,
-  'article': book,
-  'video': video
-}
+  code: terminal,
+  article: book,
+  video: video,
+};
 
 const Resource = ({ data }) => {
-  const { title, description, type, link } = data
+  const { title, description, type, link } = data;
   return (
     <Wrap>
       <div>
@@ -69,13 +69,13 @@ const Resource = ({ data }) => {
       </div>
       <h4>{title}</h4>
       <p>{description}</p>
-      <img src={arrow} alt="Arrow Top Right"/>
+      <img src={arrow} alt="Arrow Top Right" />
     </Wrap>
-  )
-}
+  );
+};
 
-export default Resource
+export default Resource;
 
 Resource.propTypes = {
-  data: PropTypes.object
-}
+  data: PropTypes.object,
+};

@@ -1,9 +1,9 @@
-import React from 'react'
+import React from "react";
 
-import styled from 'styled-components'
+import styled from "styled-components";
 
-import { SOCIAL_LINKS } from '../../constants/SocialLinks'
-import IconButton from '../atoms/IconButton'
+import { SOCIAL_LINKS } from "../../constants/SocialLinks";
+import IconButton from "../atoms/IconButton";
 
 const SocialLinkWrap = styled.div`
   align-items: center;
@@ -12,7 +12,7 @@ const SocialLinkWrap = styled.div`
   flex-direction: row;
   padding: 0.5em 0.5em 0 2em;
   width: fit-content;
-`
+`;
 
 const Copyright = styled.div`
   height: 100%;
@@ -25,7 +25,7 @@ const Copyright = styled.div`
     width: 15px;
     margin-right: 7px;
   }
-`
+`;
 
 const Footer = () => {
   return (
@@ -46,7 +46,7 @@ const Footer = () => {
         ))}
       </SocialLinkWrap>
     </footer>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

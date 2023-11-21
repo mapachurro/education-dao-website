@@ -1,20 +1,20 @@
-import React, { useState } from 'react'
+import React, { useState } from "react";
 
-import { AnimatePresence, motion } from 'framer-motion'
-import { lighten } from 'polished'
-import PropTypes from 'prop-types'
-import styled from 'styled-components'
+import { AnimatePresence, motion } from "framer-motion";
+import { lighten } from "polished";
+import PropTypes from "prop-types";
+import styled from "styled-components";
 
-import chevronLeft from '../../assets/svg/chevron-left.svg'
+import chevronLeft from "../../assets/svg/chevron-left.svg";
 
 const Wrap = styled(motion.div)`
   border-radius: 5px;
-  background-color: #2B2A2A;
+  background-color: #2b2a2a;
   color: #9aa1b2;
   padding: 0 1em;
   margin: 1.5em 0;
   box-sizing: border-box;
-`
+`;
 
 const Summary = styled.div`
   display: flex;
@@ -28,7 +28,7 @@ const Summary = styled.div`
   > img {
     user-select: none;
   }
-`
+`;
 
 const ContentWrap = styled(motion.div)`
   overflow: hidden;
@@ -36,15 +36,15 @@ const ContentWrap = styled(motion.div)`
     padding-bottom: 1.25em;
     height: 100%;
   }
-`
+`;
 
 const contentVariants = {
-  expanded: { opacity: 1, height: 'auto' },
+  expanded: { opacity: 1, height: "auto" },
   collapsed: { opacity: 0, height: 0 },
-}
+};
 
 const Details = ({ header, content }) => {
-  const [expanded, setExpanded] = useState(false)
+  const [expanded, setExpanded] = useState(false);
 
   // Function to parse content
   // 1. Is it an image? -> Turn into an image tag
@@ -80,12 +80,12 @@ const Details = ({ header, content }) => {
         )}
       </AnimatePresence>
     </Wrap>
-  )
-}
+  );
+};
 
-export default Details
+export default Details;
 
 Details.propTypes = {
   header: PropTypes.object.isRequired,
   content: PropTypes.string.isRequired,
-}
+};

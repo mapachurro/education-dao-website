@@ -1,15 +1,15 @@
-import React from 'react'
+import React from "react";
 
-import PropTypes from 'prop-types'
-import styled, { css } from 'styled-components'
+import PropTypes from "prop-types";
+import styled, { css } from "styled-components";
 
-import file from '../../assets/svg/file.svg'
+import file from "../../assets/svg/file.svg";
 
 const UnorderedListItem = styled.li`
   color: #fff;
-  ${'' /* border: 1px solid red; */}
+  ${"" /* border: 1px solid red; */}
   ${({ type }) =>
-    type === 'code' &&
+    type === "code" &&
     css`
       list-style-position: inside;
       display: flex;
@@ -28,33 +28,34 @@ const UnorderedListItem = styled.li`
         height: 1em;
       }
     `}
-`
+`;
 
-const OrderedListItem = styled.li``
+const OrderedListItem = styled.li``;
 
 export const UnorderedList = ({ children }) => {
-  const isCode = children[0].type?.name
+  const isCode = children[0].type?.name;
   return (
     <UnorderedListItem type={isCode}>
-      {isCode === 'code'
-        ? <>
+      {isCode === "code" ? (
+        <>
           <img src={file} alt="File Marker" />
           <div>{children}</div>
         </>
-        : children
-      }
+      ) : (
+        children
+      )}
     </UnorderedListItem>
-  )
-}
+  );
+};
 
 export const OrderedList = ({ children }) => {
-  return <OrderedListItem>{children}</OrderedListItem>
-}
+  return <OrderedListItem>{children}</OrderedListItem>;
+};
 
 UnorderedList.propTypes = {
   children: PropTypes.array.isRequired,
-}
+};
 
 OrderedList.propTypes = {
   children: PropTypes.array.isRequired,
-}
+};

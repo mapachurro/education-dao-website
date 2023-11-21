@@ -1,10 +1,10 @@
-import { lighten, transparentize } from 'polished'
-import { createGlobalStyle } from 'styled-components'
+import { lighten, transparentize } from "polished";
+import { createGlobalStyle } from "styled-components";
 
-import fraktionMonoRegular from '../assets/fonts/Fraktion-Mono__regular.otf'
-import fraktionSansBold from '../assets/fonts/Fraktion-Sans__bold.otf'
-import fraktionSansLight from '../assets/fonts/Fraktion-Sans__light.otf'
-import santralMedium from '../assets/fonts/santral/SantralMedium.ttf'
+import fraktionMonoRegular from "../assets/fonts/Fraktion-Mono__regular.otf";
+import fraktionSansBold from "../assets/fonts/Fraktion-Sans__bold.otf";
+import fraktionSansLight from "../assets/fonts/Fraktion-Sans__light.otf";
+import santralMedium from "../assets/fonts/santral/SantralMedium.ttf";
 
 const GlobalStyles = createGlobalStyle`
   @font-face {
@@ -93,7 +93,7 @@ const GlobalStyles = createGlobalStyle`
   }
 
   hr {
-    color: ${lighten(0.025, '#16171d')};
+    color: ${lighten(0.025, "#16171d")};
   }
 
   p {
@@ -140,7 +140,7 @@ const GlobalStyles = createGlobalStyle`
   }
 
   code {
-    background-color: ${transparentize(0.85, '#826FD8')};
+    background-color: ${transparentize(0.85, "#826FD8")};
     font-size: 0.8em;
     padding: 5px;
     border-radius: 5px;
@@ -194,6 +194,6 @@ const GlobalStyles = createGlobalStyle`
   .twitter-tweet {
     padding: 2em;
   }
-`
+`;
 
-export default GlobalStyles
+export default GlobalStyles;

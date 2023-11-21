@@ -1,20 +1,18 @@
-import React from 'react'
+import React from "react";
 
-import styled from 'styled-components'
+import styled from "styled-components";
 
-import Badge from './index.js'
+import Badge from "./index.js";
 
 export default {
-  title: 'Atoms/Badge',
+  title: "Atoms/Badge",
   component: Badge,
-  argTypes: { type: {
+  argTypes: { type: {} },
+};
 
-	} }
-}
+const Template = (args) => <Badge {...args} />;
 
-const Template = (args) => <Badge {...args} />
-
-export const Purple = Template.bind({})
+export const Purple = Template.bind({});
 Purple.args = {
-	label: 'Label'
-}
+  label: "Label",
+};

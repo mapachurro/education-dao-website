@@ -1,17 +1,17 @@
-import React from 'react'
+import React from "react";
 
-import styled from 'styled-components'
+import styled from "styled-components";
 
-import shapes from '../../assets/svg/shapes.svg'
-import { SIMPLE_BANK } from '../../constants/Hashing'
-import TabBar from '../molecules/TabBar'
-import Editor from '../organisms/Editor'
-import Markdown from '../organisms/Markdown'
-import Terminal from '../organisms/Terminal'
-import Layout from '../templates/Layout'
+import shapes from "../../assets/svg/shapes.svg";
+import { SIMPLE_BANK } from "../../constants/Hashing";
+import TabBar from "../molecules/TabBar";
+import Editor from "../organisms/Editor";
+import Markdown from "../organisms/Markdown";
+import Terminal from "../organisms/Terminal";
+import Layout from "../templates/Layout";
 
 const Workspace = () => {
-    const block = `# Simple Bank Exercise
+  const block = `# Simple Bank Exercise
 
 SimpleBank is a [Truffle](https://www.trufflesuite.com/) project that contains a starter contract, [migration](https://www.trufflesuite.com/docs/truffle/getting-started/running-migrations#migration-files) and [Truffle JavaScript test files](https://www.trufflesuite.com/docs/truffle/testing/writing-tests-in-javascript).
 
@@ -55,21 +55,21 @@ https://asciinema.org/a/u3oXwF8qKruSN81sm8MGsmTf0.js
 ### Note on testing
 
 Check out the testing files to see how tests are implemented in JavaScript. We will go over the details of implementing tests later in the curriculum. Of course, if you have questions, do reach out in Discord, or schedule an Office Hour session with one of our mentors.
-  `
+  `;
 
-	const files = ['SimpleBank.sol', 'SimpleBank.test.js']
+  const files = ["SimpleBank.sol", "SimpleBank.test.js"];
   return (
-    <Layout page='workspace'>
+    <Layout page="workspace">
       <Markdown block={block} isWorkSpace={true} />
-			<TabBar
-				files={files}
-				setSelected={() => console.log('selected')}
-				selectedTab={files[0]}
-			/>
+      <TabBar
+        files={files}
+        setSelected={() => console.log("selected")}
+        selectedTab={files[0]}
+      />
       <Editor />
       <Terminal />
     </Layout>
-  )
-}
+  );
+};
 
-export default Workspace
+export default Workspace;

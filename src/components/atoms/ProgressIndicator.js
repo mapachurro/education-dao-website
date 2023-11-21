@@ -1,9 +1,9 @@
-import React, { useRef } from 'react'
+import React, { useRef } from "react";
 
-import { motion } from 'framer-motion'
-import PropTypes from 'prop-types'
-import { useIntersection } from 'react-use'
-import styled from 'styled-components'
+import { motion } from "framer-motion";
+import PropTypes from "prop-types";
+import { useIntersection } from "react-use";
+import styled from "styled-components";
 
 const Wrap = styled.div`
   border-radius: 50%;
@@ -17,37 +17,37 @@ const Wrap = styled.div`
     transform: rotate(-90deg);
     margin-left: -30px;
   }
-`
+`;
 
 const ProgressIndicator = ({ modulesCompleted, moduleCount }) => {
   // Temp variables-- would we import this from context?
 
-  const intersectionRef = useRef(null)
+  const intersectionRef = useRef(null);
   const intersection = useIntersection(intersectionRef, {
     root: null,
-    rootMargin: '0px',
+    rootMargin: "0px",
     threshold: 1,
-  })
+  });
 
-  const radius = 45
-  const circumference = Math.ceil(2 * Math.PI * radius)
+  const radius = 45;
+  const circumference = Math.ceil(2 * Math.PI * radius);
   const fill = Math.abs(
     Math.ceil((circumference / moduleCount) * (moduleCount - modulesCompleted))
-  )
+  );
 
   const prevFill = Math.abs(
     Math.ceil((circumference / moduleCount) * (moduleCount - modulesCompleted))
-  )
+  );
 
   const durationCalc = Math.ceil(
     (0.1 / moduleCount) * (moduleCount - modulesCompleted)
-  )
+  );
 
   const transition = {
     duration: durationCalc,
     delay: 0.1,
-    ease: 'easeIn',
-  }
+    ease: "easeIn",
+  };
 
   const variants = {
     hidden: {
@@ -58,7 +58,7 @@ const ProgressIndicator = ({ modulesCompleted, moduleCount }) => {
       strokeDashoffset: fill,
       transition,
     },
-  }
+  };
 
   return (
     <Wrap>
@@ -80,27 +80,27 @@ const ProgressIndicator = ({ modulesCompleted, moduleCount }) => {
           cy="50"
           r={radius}
           strokeWidth={10}
-					stroke="#A798EF"
-          fill={'transparent'}
+          stroke="#A798EF"
+          fill={"transparent"}
           strokeDashoffset={fill}
           strokeDasharray={circumference}
-					strokeLinecap="round"
+          strokeLinecap="round"
           variants={variants}
           initial="hidden"
           animate={
             intersection && intersection.intersectionRatio < 1
-              ? 'show'
-              : 'hidden'
+              ? "show"
+              : "hidden"
           }
         />
       </svg>
     </Wrap>
-  )
-}
+  );
+};
 
-export default ProgressIndicator
+export default ProgressIndicator;
 
 ProgressIndicator.propTypes = {
   modulesCompleted: PropTypes.number.isRequired,
   moduleCount: PropTypes.number.isRequired,
-}
+};

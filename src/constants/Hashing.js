@@ -10,9 +10,9 @@
 // Goals is to make this more dynamic
 
 export const SIMPLE_BANK = {
-	'SimpleBank.sol': {
-		language: 'solidity',
-		content: `/*
+  "SimpleBank.sol": {
+    language: "solidity",
+    content: `/*
 * This exercise has been updated to use Solidity version 0.8.5
 * See the latest Solidity updates at
 * https://solidity.readthedocs.io/en/latest/080-breaking-changes.html
@@ -111,11 +111,11 @@ contract SimpleBank {
 
     // 3. Emit the appropriate event for this message
   }
-}`
-},
-	'SimpleBank.test.js': {
-		language: 'javascript',
-		content: `/*
+}`,
+  },
+  "SimpleBank.test.js": {
+    language: "javascript",
+    content: `/*
 
 The public version of the file used for testing can be found here: https://gist.github.com/ConsenSys-Academy/ce47850a8e2cba6ef366625b665c7fba
 
@@ -262,5 +262,5 @@ contract("SimpleBank", function (accounts) {
     );
   });
 });`,
-	}
-}
+  },
+};

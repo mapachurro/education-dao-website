@@ -8,8 +8,8 @@
 // ]
 
 export const CERTIFICATES = [
-	{
-		network: 'Mainnet',
-		contract_address: '0x1975fbcf98b5678db232c8d2c78fb574fab14d73'
-	}
-]
+  {
+    network: "Mainnet",
+    contract_address: "0x1975fbcf98b5678db232c8d2c78fb574fab14d73",
+  },
+];

@@ -1,17 +1,17 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useRef } from "react";
 
-import { lighten } from 'polished'
-import PropTypes from 'prop-types'
-import styled from 'styled-components'
+import { lighten } from "polished";
+import PropTypes from "prop-types";
+import styled from "styled-components";
 
-import UseConsole from '../../hooks/UseConsole'
-import Prompt from '../atoms/Prompt'
-import Output from '../molecules/Output'
+import UseConsole from "../../hooks/UseConsole";
+import Prompt from "../atoms/Prompt";
+import Output from "../molecules/Output";
 
 const Wrap = styled.div`
   grid-area: terminal;
-  background-color: ${lighten(0.05, '#16171d')};
-  border-top: 1px solid ${lighten(0.25, '#16171d')};
+  background-color: ${lighten(0.05, "#16171d")};
+  border-top: 1px solid ${lighten(0.25, "#16171d")};
   box-sizing: border-box;
   padding: 0.5em;
   align-self: end;
@@ -24,37 +24,37 @@ const Wrap = styled.div`
     color: #9aa1b2;
     font-family: pt-mono, monospace;
   }
-`
+`;
 
 const Terminal = () => {
-  const [output, onSubmit] = UseConsole()
-  const inputText = useRef()
-  const scrollRef = useRef()
+  const [output, onSubmit] = UseConsole();
+  const inputText = useRef();
+  const scrollRef = useRef();
 
   useEffect(() => {
-    const { value } = inputText.current
-    inputText.current.value = ''
-    inputText.current.focus()
-    inputText.current.scrollIntoView(false)
-  })
+    const { value } = inputText.current;
+    inputText.current.value = "";
+    inputText.current.focus();
+    inputText.current.scrollIntoView(false);
+  });
 
   const focusInput = () => {
     if (inputText.current) {
-      inputText.current.focus()
+      inputText.current.focus();
     }
-  }
+  };
 
   return (
     <Wrap onClick={focusInput} ref={scrollRef}>
       <Output output={output} />
-      <Prompt />{' '}
+      <Prompt />{" "}
       <input
         type="text"
         ref={inputText}
         onKeyPress={({ target: { value }, key }) => onSubmit(value, key)}
       />
     </Wrap>
-  )
-}
+  );
+};
 
-export default Terminal
+export default Terminal;

@@ -1,17 +1,17 @@
-import React from 'react'
+import React from "react";
 
-import Tooltip from './index'
+import Tooltip from "./index";
 
 export default {
-  title: 'Atoms/Tool Tip',
+  title: "Atoms/Tool Tip",
   component: Tooltip,
   argTypes: {
-    content: { description: 'Should be text wrapped in html' }
-  }
-}
+    content: { description: "Should be text wrapped in html" },
+  },
+};
 
-const content = <p>Now you see me</p>
+const content = <p>Now you see me</p>;
 
-export const Default = (args) => <Tooltip {...args} />
+export const Default = (args) => <Tooltip {...args} />;
 
-Default.args = { content }
+Default.args = { content };
