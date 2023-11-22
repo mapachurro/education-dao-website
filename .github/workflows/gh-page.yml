@@ -14,6 +14,11 @@ jobs:
         with:
           persist-credentials: false
 
+      - name: Create production env file
+        run: |
+          touch .env
+          echo BASE_PATH=${{ vars.BASE_PATH }} >> .env
+
       - name: Install and Build 🔧
         uses: actions/setup-node@v3
         with:
@@ -26,5 +31,7 @@ jobs:
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: build
-          clean: true
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH: gh-pages
+          FOLDER: out
+          CLEAN: true
